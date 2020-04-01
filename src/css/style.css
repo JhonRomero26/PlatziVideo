@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700;800&display=swap');
+
+html,
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Muli', sans-serif;
+  color: #fff;
+  background-color: #000;
+}
+
+a {
+  color: #fff;
+  transition: .2s color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e50914;
+}
+
+body::-webkit-scrollbar {
+  width:  8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, .5);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  height: 80px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  justify-content: space-between;
+}
+
+.content-logo img {
+  width: 200px;
+}
+
+.menu {
+  color: #fff;
+}
+
+.menu ul {
+  display: none;
+  list-style: none;
+  width: 100px;
+  position: absolute;
+  padding: 0;
+  text-align: right;
+  margin: 0;
+}
+
+.menu:hover ul, ul:hover {
+  display: block;
+  z-index: 1;
+}
+
+.menu li {
+  padding: 10px 0;
+}
+
+.menu li a {
+  color: #fff;
+}
+
+.menu li a:hover {
+  text-decoration: underline;
+}
+
+.profile {
+}
+
+.profile img {
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 40px;
+}
+
+.search-content {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 70px;
+  padding: 150px;
+  background-position: center 40%;
+  background-size: cover;
+}
+
+.subtitle {
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  -webkit-text-stroke: .5px #000;
+}
+
+.search-content input[type="search"] {
+  padding: 0 20px;
+  height: 50px;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  background-color: rgba(255, 255, 255, .1);
+  color: #fff;
+  outline: none;
+  width: 80%;
+  transition: .2s border;
+}
+
+.search-content input[type="search"]:focus {
+  border: 2px solid #e50914;
+}
+
+.search-content input::placeholder {
+  color: #fff;
+  font-weight: 700;
+}
+
+.carousel-title,
+.carousel-videos {
+  padding: 0 30px;
+}
+
+.carousel-title {
+  margin: 0;
+}
+
+.carousel-videos {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: scroll;
+  position: relative;
+}
+
+.carousel-videos::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-body {
+  white-space: nowrap;
+  margin: 55px 0;
+  padding: 10px;
+}
+
+.carousel-item {
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  margin-right: 10px;
+  background-color: rosybrown;
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  transition: 450ms all;
+  transform-origin: center left;
+  position: relative;
+}
+
+.carousel-item:hover ~ .carousel-item {
+  transform: translate3d(100px, 0, 0);
+}
+
+.carousel-body:hover .carousel-item {
+  opacity: 0.3;
+}
+
+.carousel-body:hover .carousel-item:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.carousel-item > img {
+  height: 250px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.carousel-details {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(to top, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, .2) 100%);
+  font-size: 10px;
+  opacity: 0;
+  transition: 450ms opacity;
+  padding: 10px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.carousel-item:hover .carousel-details,
+.carousel-details:hover {
+  opacity: 1;
+}
+
+.buttons-contact img {
+  height: 25px;
+  width: 25px;
+}
+.carousel-item-title,
+.carousel-item-subtitle {
+  color: #fff;
+  margin: 2px 0 0 0;
+}
+
+.carousel-item-title {
+  font-size: 14px;
+}
+
+.carousel-item-subtitle {
+  font-size: 8px;
+}
+
+footer {
+  padding: 20px 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+footer span {
+  color: rgba(255, 255, 255, .8);
+}
+
+.footer-item {
+  padding: 5px 10px;
+}
+
+
+/* Componentes Reutilizables */
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}

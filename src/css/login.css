@@ -1,0 +1,105 @@
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  padding: 80px 60px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  box-shadow: 0 5px 5px 1px rgba(255, 255, 255, .4);
+  border: 2px solid #fff;
+  max-width: 350px;
+  width: 100%;
+}
+
+.login-form {
+  display: block;
+  margin-top: 130px;
+}
+
+input[type="text"],
+input[type="password"] {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  padding: 10px;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #fff;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  padding: 15px;
+  border-radius: 25px;
+  border: none;
+}
+
+.btn-primary {
+  background-color: rgba(255, 255, 255, .4);
+  transition: 350ms background-color;
+}
+
+.btn-primary:hover {
+  background-color: rgba(255, 255, 255, .7);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.login-remember-me {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.login-social-media {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+}
+
+.login-social-media div {
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.login-social-media img {
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .login-content,
+  .login {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0 10px;
+  }
+
+  footer,
+  header {
+    padding: 0 10px;
+  }
+}
