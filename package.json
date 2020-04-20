@@ -1,0 +1,23 @@
+{
+  "name": "PlatziVideo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhonRomero26/PlatziVideo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JhonRomero26/PlatziVideo/issues"
+  },
+  "homepage": "https://github.com/JhonRomero26/PlatziVideo#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700;800&display=swap");
 
 html,
 body {
   margin: 0;
   font-size: 16px;
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
   color: #fff;
   background-color: #000;
 }
 
 a {
   color: #fff;
-  transition: .2s color;
+  transition: 0.2s color;
   text-decoration: none;
 }
 
@@ -20,11 +20,11 @@ a:hover {
 }
 
 body::-webkit-scrollbar {
-  width:  8px;
+  width: 8px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 header {
@@ -35,6 +35,18 @@ header {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   justify-content: space-between;
+}
+
+.is-hide {
+  display: none;
+}
+
+.new-recharge-buton {
+  margin-top: 15px;
+}
+
+.is-visible {
+  display: block;
 }
 
 .content-logo img {
@@ -55,7 +67,8 @@ header {
   margin: 0;
 }
 
-.menu:hover ul, ul:hover {
+.menu:hover ul,
+ul:hover {
   display: block;
   z-index: 1;
 }
@@ -81,6 +94,12 @@ header {
   width: 40px;
 }
 
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .search-content {
   border-radius: 20px;
   display: flex;
@@ -96,23 +115,29 @@ header {
   color: #fff;
   font-size: 35px;
   font-weight: bold;
-  -webkit-text-stroke: .5px #000;
+  -webkit-text-stroke: 0.5px #000;
 }
 
-.search-content input[type="search"] {
+.search-content form {
+  width: 100%;
+  text-align: center;
+}
+
+.search-content input {
   padding: 0 20px;
   height: 50px;
   border-radius: 50px;
   border: 2px solid #fff;
-  background-color: rgba(255, 255, 255, .1);
+  background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
   outline: none;
   width: 80%;
-  transition: .2s border;
+  transition: 0.2s border;
 }
 
-.search-content input[type="search"]:focus {
+.search-content input:focus {
   border: 2px solid #e50914;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .search-content input::placeholder {
@@ -151,7 +176,7 @@ header {
   display: inline-block;
   overflow: hidden;
   margin-right: 10px;
-  background-color: rosybrown;
+  background-color: #212121;
   width: 200px;
   height: 250px;
   border-radius: 20px;
@@ -162,10 +187,6 @@ header {
 
 .carousel-item:hover ~ .carousel-item {
   transform: translate3d(100px, 0, 0);
-}
-
-.carousel-body:hover .carousel-item {
-  opacity: 0.3;
 }
 
 .carousel-body:hover .carousel-item:hover {
@@ -184,7 +205,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: linear-gradient(to top, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, .2) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
   font-size: 10px;
   opacity: 0;
   transition: 450ms opacity;
@@ -227,13 +248,12 @@ footer {
 }
 
 footer span {
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .footer-item {
   padding: 5px 10px;
 }
-
 
 /* Componentes Reutilizables */
 
@@ -244,6 +264,97 @@ footer span {
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
+}
+
+/* Loader */
+
+.section-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  width: 100%;
+}
+
+.lds-grid {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.lds-grid div {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #e50914;
+  animation: lds-grid 1.2s linear infinite;
+}
+
+.lds-grid div:nth-child(1) {
+  top: 6px;
+  left: 6px;
+  animation-delay: 0s;
+}
+
+.lds-grid div:nth-child(2) {
+  top: 6px;
+  left: 26px;
+  animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(3) {
+  top: 6px;
+  left: 45px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(4) {
+  top: 26px;
+  left: 6px;
+  animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(5) {
+  top: 26px;
+  left: 26px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(6) {
+  top: 26px;
+  left: 45px;
+  animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(7) {
+  top: 45px;
+  left: 6px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(8) {
+  top: 45px;
+  left: 26px;
+  animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(9) {
+  top: 45px;
+  left: 45px;
+  animation-delay: -1.6s;
+}
+
+@keyframes lds-grid {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
 }
 
 @media only screen and (min-width: 576px) {
@@ -267,5 +378,18 @@ footer span {
 @media only screen and (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+}
+
+.fadeIn {
+  animation: 1500ms fadeIn;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
